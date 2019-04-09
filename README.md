@@ -9,4 +9,8 @@ Setting and Accessing Values on Objects using:
 
 In addition, there are added examples of iterating over arrays using a simple for loop as well as the forEach array method.
 
-All output direct to console.
+## Searching Data Exercise
+
+The exercise in the github_data.js file practices accessing property values and array indices to output commit message for the push event with an id of 8030403992.
+
+All exercise output direct to console.
