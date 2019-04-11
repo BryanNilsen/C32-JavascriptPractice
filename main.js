@@ -7,7 +7,9 @@ const car = {
   color: "red"
 };
 
-console.log(car);
+console.log("car object:", car);
+console.log(`This car is a ${car.color} ${car.year} ${car.make} ${car.model}`);
+
 // Lightning Exercise 2: Given two options of data structures - array or object - which should you use? You need to store list of animal names in a shelter. The names are "Kippers", "Jack", "Gypsy", "Angus", "Seymour Bouts", and "Sharky".
 
 const animalNames = [
@@ -19,7 +21,7 @@ const animalNames = [
   "Sharky"
 ];
 
-console.log(animalNames);
+console.log("animal names array:", animalNames);
 
 // Lightning Exercise 3: Define an object for four family members, and put each object in an array named familyMembers. Each family member object that you create should have the same keys on them, but the values will be different.
 const mother = {
@@ -47,6 +49,29 @@ const familyMembers = [mother, father, son, daughter];
 console.log(familyMembers);
 console.log("The mother's name is", mother.name);
 
+// creating family member objects directly within the familyMembers2 array
+const familyMembers2 = [
+  {
+    name: "Eddie",
+    age: 63
+  },
+  {
+    name: "David",
+    age: 64
+  },
+  {
+    name: "Alex",
+    age: 65
+  },
+  {
+    name: "Michael",
+    age: 59
+  }
+];
+
+console.log("family members 2:", familyMembers2);
+console.log(`${familyMembers2[0].name} is ${familyMembers2[0].age} years old.`);
+
 // DOT NOTATION
 // Lightning Exercise: Given the object below, output each of the values to the console using dot notation.
 
@@ -67,6 +92,13 @@ console.log(`the wardrobe width is`, wardrobe.width, `inches.`);
 wardrobe.material = `cedar`;
 
 console.log(wardrobe);
+
+// iterate using object keys and values
+Object.entries(wardrobe).forEach(entry => {
+  let key = entry[0];
+  let value = entry[1];
+  console.log(`the ${key} is ${value}`);
+});
 
 // Lightning Exercises
 // Time to practice dot and square-bracket notation. Use the following object to complete the lightning exercises below.
@@ -90,6 +122,11 @@ console.log(`height:`, empireStateBuilding.height);
 console.log(`square feet:`, empireStateBuilding.squareFeet);
 console.log(`east-west length:`, empireStateBuilding.eastWestLength);
 console.log(`north-south length:`, empireStateBuilding.northSouthLength);
+
+// iterate using object keys and values
+Object.entries(empireStateBuilding).forEach(entry => {
+  console.log(`ESB entries - key: ${entry[0]}, value: ${entry[1]}`);
+});
 
 // Lightning Exercises 2: Use square bracket notation to output the remaining 5 properties to the console. Create 5 variables first with the keys as their values. Use those variables to look up the values.
 
