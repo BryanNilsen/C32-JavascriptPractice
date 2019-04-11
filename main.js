@@ -187,12 +187,9 @@ const beatles = {
 // Paul McCartney was in the Beatles from 1960 to 1970. He was born in 1942. He contributed heavily to the Magical Myster Tour Album.
 
 console.log(
-  beatles.members[1].name,
-  `was in the Beatles from`,
-  beatles.history.formed,
-  `to`,
-  beatles.history.disbanded,
-  `. He contributed heavily to the`,
-  beatles.albums[3],
-  `album.`
+  `${beatles.members[1].name} was in the Beatles from ${
+    beatles.history.formed
+  } to ${beatles.history.disbanded}. He contributed heavily to the ${
+    beatles.albums[3]
+  } album.`
 );
