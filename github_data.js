@@ -5597,7 +5597,7 @@ const githubData = [
   }
 ];
 
-// long way - searched code and found id at index 6
+// long way - manual search of code and found id at index 6
 console.log(githubData[6].payload.commits[0].message);
 
 // faster way - set githubId equal to id of specified object
@@ -5606,8 +5606,21 @@ let githubId = "8030403992";
 const targetObject = githubData.find(item => item.id === githubId);
 
 console.log(
-  `Commit message for commit id`,
-  githubId,
-  `:`,
-  targetObject.payload.commits[0].message
+  `Commit message for commit id ${githubId}:
+  ${targetObject.payload.commits[0].message}`
 );
+
+// same as above, although full path to message applied to variable
+const targetObjectMessage = githubData.find(item => item.id === githubId)
+  .payload.commits[0].message;
+
+console.log(
+  `Find Way >> Commit message for commit id ${githubId}:
+  ${targetObjectMessage}`
+);
+
+githubData.forEach(item => {
+  if (item.id === "8030403992") {
+    console.log("For Each Way:", item.payload.commits[0].message);
+  }
+});
